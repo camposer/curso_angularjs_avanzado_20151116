@@ -1,0 +1,36 @@
+1.- Descargar e instalar NodeJS
+	https://nodejs.org/download/
+
+2.- Descargar e instalar ConEmu (buscar en google)
+	http://sourceforge.net/projects/conemu/
+
+3.- Descargar e instalar Git
+	https://git-scm.com/download/win
+	- Seleccionar "Use Git for Windows Command Prompt"
+	- Añadir al PATH C:\Program Files (x86)\Git\bin
+
+4.- Ejecutar:
+	C:\> npm --version
+
+5.- Instalar paquetes:
+	5.1.- Abrir la ConEmu como Administrador
+		- Presionar shift + clic derecho sobre el icono. Ejecutar como Administrador
+	5.2.- Ejecutar:
+		C:\> npm install -g yo bower grunt-cli generator-angular
+
+	Donde:
+		- yo. Yeoman
+		- bower. Gestor de dependencias para el front
+		- grunt-cli. Gestión de la configuración (test, serve)
+		- generator-angular. Generador de proyectos angular de Yeoman
+
+
+6.- Crear proyecto (para estos pasos no es necesario ser administrador)
+	6.1.- Ejecutar:
+		C:\> mkdir proyecto & cd proyecto & yo angular
+	6.2.- Iniciar
+		C:\proyecto> npm install & bower install
+		C:\proyecto> grunt serve
+
+
+
