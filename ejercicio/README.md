@@ -1,5 +1,18 @@
-Ejercicio
-=========
+# Instrucciones para arrancar el proyecto
+
+En una consola arrancar el backend:
+```
+backend> npm install & npm start
+```
+
+En otra consola arrancar el frontend:
+```
+frontend> npm install & npm start
+```
+
+Ejecutar en el navegador la URL: `http://localhost:8000/app`
+
+# Ejercicio
 
 1.- Crear la estructura del proyecto utilizando [Angular-Seed](https://github.com/angular/angular-seed) e importar el proyecto creado en el [curso básico de AngularJS](https://github.com/camposer/curso_angularjs_20151015)
 
