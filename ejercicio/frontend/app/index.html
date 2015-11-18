@@ -1,0 +1,54 @@
+<html ng-app="tienda">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="/stylesheets/bootstrap.css">
+	<link rel="stylesheet" href="/stylesheets/angular-chart.css">
+	<style>
+		.header-bar-left {
+			float: left; 
+			width: 50%;
+		}
+		.header-bar-right {
+			float: left; 
+			width: 50%;
+			text-align: right;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="header-bar-left">
+			<a href="#/">Catálogo</a>&nbsp;
+			<a href="#/carrito">Carrito</a>
+		</div>
+		<div class="header-bar-right">
+			<a href="#/producto" class="text-right">Producto</a>&nbsp;
+			<a href="#/reporte">Reporte</a>
+		</div>
+
+		<div ng-view></div>
+	</div>
+
+	<script src="/javascripts/jquery-1.10.2.js"></script>
+	<script src="/javascripts/bootstrap.js"></script>
+	<script src="/javascripts/chart.js"></script>
+	<script src="/javascripts/angular.js"></script>
+	<script src="/javascripts/angular-route.js"></script>
+	<script src="/javascripts/angular-chart.js"></script>
+
+	<script src="/javascripts/app.js"></script>
+	<script src="/javascripts/routes.js"></script>
+	<script src="/javascripts/service/producto.js"></script>
+	<script src="/javascripts/service/carrito.js"></script>
+	<script src="/javascripts/service/compra.js"></script>
+	<script src="/javascripts/controller/producto.js"></script>
+	<script src="/javascripts/controller/catalogo.js"></script>
+	<script src="/javascripts/controller/carrito.js"></script>
+	<script src="/javascripts/controller/reporte.js"></script>
+</body>
+</html>
+
+
+
+
+

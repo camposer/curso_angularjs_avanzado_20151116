@@ -1,0 +1,21 @@
+<h1 class="text-center">Carrito</h1>
+
+<table class="table table-striped">
+  <thead>
+  	<tr>
+  		<th>Nombre</th>
+  		<th>Precio</th>
+  		<th>Cantidad</th>
+      <th>Total</th>
+  	</tr>
+  </thead>
+  <tbody>
+  	<tr ng-repeat="p in carrito">
+  		<td>{{ p.nombre }}</td>
+  		<td>{{ p.precio | currency:'€'}}</td>
+      <td>{{ p.cantidad }}</td>
+      <td>{{ p.precio * p.cantidad | currency:'€' }}</td>
+  	</tr>
+  </tbody>
+</table>	
+<input type="button" class="btn btn-default" value="Comprar" ng-click="comprar()">

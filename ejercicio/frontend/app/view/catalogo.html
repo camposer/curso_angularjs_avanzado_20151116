@@ -1,0 +1,27 @@
+<h1 class="text-center">Tienda de equipos electrónicos</h1>
+
+<form name="form" ng-submit="form.$valid && agregar()" novalidate>
+  <div class="alert alert-danger" ng-show="form.$invalid">
+      Debe introducir precios válidos (>0)
+  </div>
+
+  <table class="table table-striped">
+    <thead>
+    	<tr>
+    		<th>Nombre</th>
+    		<th>Precio</th>
+    		<th>Cantidad</th>
+    	</tr>
+    </thead>
+    <tbody>
+    	<tr ng-repeat="p in productos">
+    		<td>{{ p.nombre }}</td>
+    		<td>{{ p.precio | currency:'€' }}</td>
+    		<td>
+          <input type="number" ng-model="p.cantidad">
+        </td>
+    	</tr>
+    </tbody>
+  </table>	
+  <input type="submit" class="btn btn-default" value="Agregar">
+</form>
