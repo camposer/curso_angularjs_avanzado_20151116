@@ -1,7 +1,7 @@
 Ejercicio
 =========
 
-1.- Crear la estructura del proyecto utilizando (Angular-Seed)[https://github.com/angular/angular-seed] e importar el proyecto creado en el (curso básico de AngularJS)[https://github.com/camposer/curso_angularjs_20151015]
+1.- Crear la estructura del proyecto utilizando [Angular-Seed](https://github.com/angular/angular-seed) e importar el proyecto creado en el [curso básico de AngularJS](https://github.com/camposer/curso_angularjs_20151015)
 
 2.- Implementar una directiva para el manejo de mensajes de error. El resultado debe ser algo como:
 	<mensaje src="ctrl.mensaje"></mensaje>
