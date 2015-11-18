@@ -9,7 +9,7 @@
 
 		this.obtenerCompras = function(success, error) {
 			$http({
-				url: '/compras',
+				url: 'http://localhost:3000/compras',
 				method: 'get'
 			}).then(success, error);
 

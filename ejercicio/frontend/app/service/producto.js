@@ -6,7 +6,7 @@
 		.service('ProductoService', [ '$http', ProductoService ]);
 
 	function ProductoService($http) {
-		var URL_BASE = "/productos";
+		var URL_BASE = "http://localhost:3000/productos";
 
 		this.agregar = function(p, success, error) {
 			$http({

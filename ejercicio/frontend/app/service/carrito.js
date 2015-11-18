@@ -49,7 +49,7 @@
 
 		this.comprar = function(p, success) {
 			$http({
-				url: '/compras',
+				url: 'http://localhost:3000/compras',
 				method: 'post',
 				data: {
 					productoId: p.id,

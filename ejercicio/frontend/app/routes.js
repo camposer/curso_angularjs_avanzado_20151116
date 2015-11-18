@@ -7,22 +7,22 @@
 
 	function RouteConfig($routeProvider) {
 		$routeProvider.when('/', {
-			templateUrl: 'catalogo.html',
+			templateUrl: 'view/catalogo.html',
 			controller: 'CatalogoController'
 		});
 
 		$routeProvider.when('/carrito', {
-			templateUrl: 'carrito.html',
+			templateUrl: 'view/carrito.html',
 			controller: 'CarritoController'
 		});
 
 		$routeProvider.when('/producto', {
-			templateUrl: 'producto.html',
+			templateUrl: 'view/producto.html',
 			controller: 'ProductoController'
 		});
 
 		$routeProvider.when('/reporte', {
-			templateUrl: 'reporte.html',
+			templateUrl: 'view/reporte.html',
 			controller: 'ReporteController'
 		});
 

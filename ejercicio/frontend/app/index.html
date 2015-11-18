@@ -1,8 +1,8 @@
 <html ng-app="tienda">
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="/stylesheets/bootstrap.css">
-	<link rel="stylesheet" href="/stylesheets/angular-chart.css">
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="bower_components/angular-chart/dist/angular-chart.css">
 	<style>
 		.header-bar-left {
 			float: left; 
@@ -29,22 +29,24 @@
 		<div ng-view></div>
 	</div>
 
-	<script src="/javascripts/jquery-1.10.2.js"></script>
-	<script src="/javascripts/bootstrap.js"></script>
-	<script src="/javascripts/chart.js"></script>
-	<script src="/javascripts/angular.js"></script>
-	<script src="/javascripts/angular-route.js"></script>
-	<script src="/javascripts/angular-chart.js"></script>
+	<!-- Vendor -->
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="bower_components/Chart.js/Chart.js"></script>
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-route/angular-route.js"></script>
+	<script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
 
-	<script src="/javascripts/app.js"></script>
-	<script src="/javascripts/routes.js"></script>
-	<script src="/javascripts/service/producto.js"></script>
-	<script src="/javascripts/service/carrito.js"></script>
-	<script src="/javascripts/service/compra.js"></script>
-	<script src="/javascripts/controller/producto.js"></script>
-	<script src="/javascripts/controller/catalogo.js"></script>
-	<script src="/javascripts/controller/carrito.js"></script>
-	<script src="/javascripts/controller/reporte.js"></script>
+	<!-- App -->
+	<script src="app.js"></script>
+	<script src="routes.js"></script>
+	<script src="service/producto.js"></script>
+	<script src="service/carrito.js"></script>
+	<script src="service/compra.js"></script>
+	<script src="controller/producto.js"></script>
+	<script src="controller/catalogo.js"></script>
+	<script src="controller/carrito.js"></script>
+	<script src="controller/reporte.js"></script>
 </body>
 </html>
 
