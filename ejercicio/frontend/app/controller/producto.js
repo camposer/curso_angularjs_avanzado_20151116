@@ -61,11 +61,17 @@
 		};
 
 		$scope.eliminar = function(id) {
+			$scope.mensajes = MensajesFactory.createMensajes();
+
 			if (confirm('Eliminar?'))
-				productoService.eliminar(id, listar);
+				productoService.eliminar(id, function() {
+					listar();
+					$scope.mensajes.exito.push('Elemento eliminado satisfactoriamente');
+				});
 		};
 
 		$scope.mostrar = function(p) {
+			$scope.mensajes = MensajesFactory.createMensajes();
 			$scope.producto = p;
 		};
 	};
