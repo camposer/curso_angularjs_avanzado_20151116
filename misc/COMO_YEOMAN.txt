@@ -16,7 +16,8 @@
 	5.1.- Abrir la ConEmu como Administrador
 		- Presionar shift + clic derecho sobre el icono. Ejecutar como Administrador
 	5.2.- Ejecutar:
-		C:\> npm install -g yo bower grunt-cli generator-angular
+		C:\> npm install -g npm (actualiza NPM en caso de necesitarse)
+		C:\> npm install -g grunt-cli bower yo generator-karma generator-angular
 
 	Donde:
 		- yo. Yeoman
