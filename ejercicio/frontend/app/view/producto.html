@@ -2,11 +2,7 @@
 
 <form name="formProducto" class="form-horizontal" ng-submit="guardar(formProducto)" novalidate>
 
-	<div class="alert alert-danger" ng-show="errores.length > 0">
-			<ul ng-repeat="e in errores">
-				<li>{{e}}</li>
-			</ul>
-	</div>
+  <mensajes src="mensajes"></mensajes>
 
 
   <div class="form-group">

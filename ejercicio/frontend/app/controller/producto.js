@@ -3,9 +3,9 @@
 (function() {
 	angular
 		.module('tienda')
-		.controller('ProductoController', [ '$scope', 'ProductoService', ProductoController ]);
+		.controller('ProductoController', [ '$scope', 'MensajesFactory', 'ProductoService', ProductoController ]);
 
-	function ProductoController($scope, productoService) {
+	function ProductoController($scope, MensajesFactory, productoService) {
 		var listar = function() {
 			productoService.obtenerTodos(function(resp) {
 				$scope.productos = resp.data;
@@ -23,16 +23,21 @@
 		init();
 		
 		$scope.guardar = function(form) {
+			$scope.mensajes = MensajesFactory.createMensajes();
+
 			var callback = function() {
 				limpiarForm();
 				listar();
 			};
 
-			$scope.errores = [];
+			var error = function() {
+				$scope.mensajes.error.push('Ha ocurrido un error del lado del servidor');
+			};
+
 			if (form.nombre.$invalid) // TODO mejorar validación
-				$scope.errores.push('Nombre inválido')
+				$scope.mensajes.error.push('Nombre inválido')
 			if (form.precio.$invalid) // TODO mejorar validación
-				$scope.errores.push('Precio inválido')
+				$scope.mensajes.error.push('Precio inválido')
 
 			if (form.$valid) {
 				var p = {
@@ -41,9 +46,15 @@
 				};
 				if ($scope.producto.id) {
 					p.id = $scope.producto.id;
-					productoService.modificar(p, callback);
+					productoService.modificar(p, function() {
+						$scope.mensajes.exito.push('Elemento modificado satisfactoriamente');
+						callback();
+					}, error);
 				} else {
-					productoService.agregar(p, callback);
+					productoService.agregar(p, function() {
+						$scope.mensajes.exito.push('Elemento agregado satisfactoriamente');
+						callback();
+					}, error);
 				}
 			}
 
