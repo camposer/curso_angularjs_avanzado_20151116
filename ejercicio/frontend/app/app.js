@@ -1,5 +1,5 @@
 'use strict';
 
 (function() {
-	angular.module('tienda', [ 'ngRoute', 'chart.js' ]);	
+	angular.module('tienda', [ 'ngRoute', 'ngAnimate', 'chart.js' ]);	
 })();

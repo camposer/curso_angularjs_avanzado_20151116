@@ -5,10 +5,16 @@ module.exports = function(config){
 
     files : [
       'app/bower_components/angular/angular.js',
-      'app/bower_components/angular-route/angular-route.js',
+//      'app/bower_components/angular-route/angular-route.js',
+//      'app/bower_components/angular-animate/angular-animate.js',
       'app/bower_components/angular-mocks/angular-mocks.js',
-      'app/components/**/*.js',
-      'app/view*/**/*.js'
+
+      'app/app.spec.js',
+//      'app/routes.js',
+      'app/factory/*.js',
+      'app/controller/*.js',
+      'app/service/*.js',
+      'app/directive/*.js'
     ],
 
     autoWatch : true,
