@@ -33,6 +33,8 @@
 	        });
 
 			deferred.promise.then(success, error);
+
+	        // success({data: productos});
 		};
 
 		this.agregar = function(producto, success, error) {
@@ -44,7 +46,7 @@
 	        }).then(success, error);
 		};
 
-		this.modificar = function(producto) {
+		this.modificar = function(producto, success, error) {
 			var pos = buscarPos(producto.id);
 
 			if (pos)
@@ -58,7 +60,7 @@
 	        }).then(success, error);
 		};
 
-		this.eliminar = function(id) {
+		this.eliminar = function(id, success, error) {
 			var pos = buscarPos(id);
 			if (pos)
 				productos.splice(pos, 1);
