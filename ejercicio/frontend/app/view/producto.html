@@ -44,7 +44,7 @@
   		<td>{{ ::p.nombre }}</td>
   		<td>{{ ::p.precio | currency:'€' }}</td>
   		<td><a href ng-click="mostrar(p)">mostrar</a></td>
-  		<td><a href ng-click="eliminar(p.id)">eliminar</a></td>
+  		<td><a href confirm-click="eliminar(p.id)" confirmation="Eliminar?">eliminar</a></td>
   	</tr>
   </tbody>
 </table>	
