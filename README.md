@@ -31,6 +31,7 @@
 		- http://karma-runner.github.io/0.13/index.html
 		- http://jasmine.github.io/1.3/introduction.html
 		- https://docs.angularjs.org/api/ngMock
+		- https://docs.angularjs.org/api/ngMock/service/$httpBackend
 	- Test E2E
 		- https://docs.angularjs.org/guide/e2e-testing
 		- https://github.com/angular/protractor

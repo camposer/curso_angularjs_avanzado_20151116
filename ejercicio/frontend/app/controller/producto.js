@@ -63,7 +63,7 @@
 		$scope.eliminar = function(id) {
 			$scope.mensajes = MensajesFactory.createMensajes();
 
-			if (confirm('Eliminar?'))
+//			if (confirm('Eliminar?'))
 				productoService.eliminar(id, function() {
 					listar();
 					$scope.mensajes.exito.push('Elemento eliminado satisfactoriamente');

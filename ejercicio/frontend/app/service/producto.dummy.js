@@ -6,23 +6,7 @@
 		.service('ProductoServiceDummy', [ '$q', ProductoService ]);
 
 	function ProductoService($q) {
-		var productos = [
-			{
-				id: 1,
-				nombre: 'uno',
-				precio: 1
-			},
-			{
-				id: 2,
-				nombre: 'dos',
-				precio: 2
-			},
-			{
-				id: 3,
-				nombre: 'tres',
-				precio: 3
-			}
-		];
+		var productos = [];
 		var contador = 1;
 
 		this.obtenerTodos = function(success, error) {
@@ -68,6 +52,12 @@
 	        $q(function(resolve) {
 	        	resolve();
 	        }).then(success, error);
+		}
+
+		this.obtener = function(id) {
+			var pos = buscarPos(id);
+			if (pos)
+				return productos[pos];
 		}
 
 		var buscarPos = function(id) {
